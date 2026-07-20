@@ -7,3 +7,13 @@ function actualizarFecha() {
     contenedor.innerHTML = `Actualizado el: ${  texto.charAt(0).toUpperCase() + texto.slice(1)}`;
 }
 document.addEventListener('DOMContentLoaded', actualizarFecha);
+
+// Recarga de página al hacer clic en IDCard
+document.addEventListener('DOMContentLoaded', function() {
+    const idcard = document.getElementById('idcard-reload');
+    if (idcard) {
+        idcard.addEventListener('click', function() {
+            location.reload();
+        });
+    }
+});
